@@ -60,3 +60,9 @@ git clone https://github.com/LeoJ0515/GeoSnapper.git
 
 # Copy the folder to
 C:\xampp\htdocs\GeoSnapper
+
+Start XAMPP
+Start Apache server
+No database required - it's a frontend application
+
+http://localhost/GeoSnapper/index.html
