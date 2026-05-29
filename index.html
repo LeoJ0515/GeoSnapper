@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Geo-Snapper Pro</title>
+
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- GPS Status Bar -->
+    <div id="gps-status-bar">
+        <i class="bi bi-reception-0" id="signal-icon" style="font-size: 1.2rem;"></i>
+        <div style="display: flex; flex-direction: column; line-height: 1;">
+            <span style="font-weight: 700; font-size: 0.8rem;" id="signal-text">Searching...</span>
+            <span style="font-size: 0.7rem; opacity: 0.8;" id="accuracy-text">Waiting for signal</span>
+        </div>
+    </div>
+
+    <!-- Permission Overlay -->
+    <div id="permission-overlay">
+        <i class="bi bi-geo-alt-fill" style="font-size: 4rem; color: #0d6efd; margin-bottom: 20px;"></i>
+        <h2 class="fw-bold">Enable GPS</h2>
+        <p class="mb-4 text-white-50" style="max-width: 300px;">
+            Please allow location access to start mapping.
+        </p>
+        <button class="btn btn-primary btn-lg rounded-pill px-5 fw-bold" onclick="manualRequestGPS()">
+            Allow Access
+        </button>
+        <p id="error-msg" class="mt-3 text-danger fw-bold d-none"></p>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="d-none">
+        <div class="spinner-border text-light" role="status"></div>
+        <p class="mt-3 fw-bold">Processing...</p>
+    </div>
+
+    <!-- Recenter Button -->
+    <button class="recenter-btn" id="recenterBtn" onclick="recenterMap()">
+        <i class="bi bi-cursor-fill"></i>
+    </button>
+
+    <!-- Main Controls -->
+    <div class="controls-container" id="mainControls">
+        <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+        <button id="snapBtn" class="snap-btn">
+            <i class="bi bi-camera-fill"></i>
+        </button>
+        <div class="instruction-text">Tap to Snap & Map</div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100">
+        <div id="statusToast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMsg">Ready</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Internal JS -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
