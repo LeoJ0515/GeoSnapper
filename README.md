@@ -58,11 +58,14 @@ A powerful web application that combines real-time GPS tracking with photo geota
 ```bash
 git clone https://github.com/LeoJ0515/GeoSnapper.git
 ```
-# Copy the folder to
+2. **Copy the folder to**
+```bash
 C:\xampp\htdocs\GeoSnapper
-
+```
 Start XAMPP
+
 Start Apache server
+
 No database required - it's a frontend application
 
 http://localhost/GeoSnapper/index.html
