@@ -30,7 +30,7 @@ A powerful web application that combines real-time GPS tracking with photo geota
 
 ## 🚀 Live Demo
 
-[View Live Demo]([https://your-demo-link.com](https://leoj0515.github.io/GeoSnapper/))
+[[View Live Demo](https://leoj0515.github.io/GeoSnapper/)]
 
 ## 💻 Technologies Used
 
