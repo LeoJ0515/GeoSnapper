@@ -2,8 +2,6 @@
 
 A powerful web application that combines real-time GPS tracking with photo geotagging, allowing users to capture and pin photos exactly where they were taken.
 
-![GeoSnapper Banner](https://via.placeholder.com/1200x400/1a4f68/ffffff?text=GeoSnapper+GPS+Photo+Mapper)
-
 ## ✨ Features
 
 ### 🗺️ Real-time GPS Tracking
