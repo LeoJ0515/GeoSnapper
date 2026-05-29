@@ -57,3 +57,6 @@ A powerful web application that combines real-time GPS tracking with photo geota
 1. **Clone the repository**
 ```bash
 git clone https://github.com/LeoJ0515/GeoSnapper.git
+
+# Copy the folder to
+C:\xampp\htdocs\GeoSnapper
